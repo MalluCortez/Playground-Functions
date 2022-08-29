@@ -51,27 +51,71 @@ return quantidadeMaiorNumero
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
+  let distanciaCat1 = mouse - cat1 ;
+  let distanciaCat2 = mouse - cat2 ;
+
+  if (distanciaCat1 < 0){
+    distanciaCat1 = distanciaCat1 * -1
+  }
+
+  if (distanciaCat2 < 0) {
+    distanciaCat2 = distanciaCat2 * -1
+  } 
+
+
+if (distanciaCat1 < distanciaCat2){
+  return "cat1"
+} else if (distanciaCat2 < distanciaCat1){
+  return "cat2"
+} else if (distanciaCat1 === distanciaCat2){
+  return "os gatos trombam e o rato foge"
+}
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+
+  let resultado = []
+
+ for (indice = 0; indice < numeros.length; indice ++){
+    if (numeros[indice] %3 === 0 && numeros[indice] %5 === 0) {
+      resultado.push ('fizzBuzz')
+    } else if (numeros[indice] %3 === 0) {
+      resultado.push ('fizz')
+    } else if (numeros[indice] %5 === 0) {
+      resultado.push ('buzz')
+    } else {
+      resultado.push ('bug!')
+    }
+ 
+}
+return resultado
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+
+  let novaFrase = frase.replace(/a/g,"1").replace(/e/g,"2").replace(/i/g,"3").replace(/o/g,"4").replace(/u/g,"5")
+
+  return novaFrase
+
 }
-function decode() {
-  // seu código aqui
+
+
+function decode(frase) {
+  let novaFrase = frase.replace(/1/g,"a").replace(/2/g,"e").replace(/3/g,"i").replace(/4/g,"o").replace(/5/g,"u")
+
+  return novaFrase
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologias, nomes) {
+  
 }
+
+
 
 module.exports = {
   calcArea,
