@@ -111,9 +111,23 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList(tecnologias, nomes) {
+
+function techList(tecnologias, nome) {
+
+  let techNome = []
+
+  for (let i in tecnologias){
+    let techObjeto = {
+      tech: tecnologias[i],
+      name: nome
+    }
+    techNome.push (techObjeto)
   
-}
+  }
+  return techNome
+    }
+  
+
 
 
 
